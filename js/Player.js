@@ -6,7 +6,7 @@ class Player {
     this.positionY = 0;
   }
 
-  /* addPlayer() {
+   addPlayer() {
     var playerIndex = "players/player" + this.index;
 
     if (this.index === 1) {
@@ -30,7 +30,7 @@ class Player {
       this.positionY = data.positionY;
     });
   }
- */
+ 
   //Bp
   getCount() {
     var playerCountRef = database.ref("playerCount");
@@ -44,12 +44,13 @@ class Player {
     database.ref("/").update({
       playerCount: count
     });
-  }}
-/* 
+  }
+
   //SA
   update() {
     var playerIndex = "players/player" + this.index;
     database.ref(playerIndex).update({
+      name: this.name,
       positionX: this.positionX,
       positionY: this.positionY,
      });
@@ -62,4 +63,4 @@ class Player {
       allPlayers = data.val();
     });
   }
-} */
+} 
