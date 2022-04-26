@@ -44,9 +44,9 @@ class Game {
   play() {
     this.handleElements();
 
-    //Player.getPlayersInfo();
+    Player.getPlayersInfo();
 
-   /*  if (allPlayers !== undefined) {
+    if (allPlayers !== undefined) {
       image(track, 0, -height * 5, width, height * 6);
 
       //index of the array
@@ -68,8 +68,7 @@ class Game {
         player.positionY += 10;
         player.update();
       }
- */
       drawSprites();
     }
   }
-
+}
