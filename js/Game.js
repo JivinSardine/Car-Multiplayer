@@ -44,7 +44,7 @@ class Game {
   play() {
     this.handleElements();
 
-    Player.getPlayersInfo();
+    Player.getPlayersInfo(); //added
 
     if (allPlayers !== undefined) {
       image(track, 0, -height * 5, width, height * 6);
@@ -61,6 +61,12 @@ class Game {
 
         //add 1 to the index for every loop
         index = index + 1;
+
+        if (index === player.index) {
+          stroke(10);
+          fill("red");
+          ellipse(x, y, 60, 60);
+        }
       }
 
       // handling keyboard events
@@ -68,6 +74,7 @@ class Game {
         player.positionY += 10;
         player.update();
       }
+ 
       drawSprites();
     }
   }
